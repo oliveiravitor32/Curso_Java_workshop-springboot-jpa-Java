@@ -12,12 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.educandoweb.course.entities.Product;
 import com.educandoweb.course.services.ProductService;
 
+
 @RestController
 @RequestMapping(value = "/products")
 public class ProductResource {
 
 	@Autowired
-	ProductService service;
+	private ProductService service;
 
 	@GetMapping
 	public ResponseEntity<List<Product>> findAll() {
